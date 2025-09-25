@@ -11,46 +11,52 @@ export const eventType = {
     },
     {
       name: 'slug',
-      type: 'slug'
+      type: 'slug',
     },
     {
       name: 'eventType',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'date',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'doorsOpen',
-      type: 'number'
+      type: 'number',
     },
     {
       name: 'venue',
       type: 'reference',
-      to: [{type: 'venue'}]
+      to: [{type: 'venue'}],
     },
     {
       name: 'headline',
       type: 'reference',
-      to: [{type: 'artist'}]
+      to: [{type: 'artist'}],
     },
     {
       name: 'image',
-      type: 'image'
+      type: 'image',
     },
     {
       name: 'details',
-      type:'array',
-      of: [{type : 'block'}]
+      type: 'array',
+      of: [{type: 'block'}],
     },
     {
       name: 'tickets',
-      type: 'url'
+      type: 'url',
     },
     {
       name: 'doorOpen',
-      type: 'number'
-    }
+      type: 'number',
+    },
+    ({
+      name: 'firstPublished',
+      description: 'Automatically set when first published',
+      type: 'datetime',
+      readOnly: true,
+    }),
   ],
 }
